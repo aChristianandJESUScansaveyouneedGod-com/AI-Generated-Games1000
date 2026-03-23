@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Mischief</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Menu Mischief</h1>
+        <p class="subtitle">Navigate chaotic menus. Collect giggles. Avoid paperwork.</p>
+      </header>
+
+      <section class="hud" aria-label="Game status">
+        <div><strong>Giggles:</strong> <span id="score">0</span></div>
+        <div><strong>Energy:</strong> <span id="energy">5</span></div>
+        <div><strong>Round:</strong> <span id="round">1</span></div>
+      </section>
+
+      <section class="panel" aria-live="polite">
+        <h2 id="scene-title">Welcome to the Main Menu Lobby</h2>
+        <p id="scene-text">
+          Every button here has opinions. Pick a menu option and see what hilarious event happens.
+        </p>
+      </section>
+
+      <section>
+        <h3>Menu Options</h3>
+        <div id="choices" class="choices"></div>
+      </section>
+
+      <section class="log-wrap">
+        <h3>Event Log</h3>
+        <ul id="log" class="log"></ul>
+      </section>
+
+      <section class="controls">
+        <button id="restart" type="button">Restart Run</button>
+      </section>
+    </main>
+
+    <script src="./game.js" defer></script>
+  </body>
+</html>

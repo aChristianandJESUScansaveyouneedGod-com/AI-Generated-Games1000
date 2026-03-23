@@ -22,4 +22,15 @@ for header in "${required_headers[@]}"; do
   fi
 done
 
+# Validate the browser game's entrypoint wiring.
+if ! rg -Fq "<title>Menu Mischief</title>" web/menu-mischief/index.html; then
+  echo "[test] menu game title is missing" >&2
+  exit 1
+fi
+
+if ! rg -Fq "<script src=\"./game.js\" defer></script>" web/menu-mischief/index.html; then
+  echo "[test] menu game script link is missing" >&2
+  exit 1
+fi
+
 echo "[test] all checks passed"
