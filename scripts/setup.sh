@@ -9,6 +9,7 @@ required_files=(
   "docs/ARCHITECTURE.md"
   "scripts/setup.sh"
   "scripts/test.sh"
+  "scripts/package_menu_mischief.sh"
   "web/menu-mischief/index.html"
   "web/menu-mischief/styles.css"
   "web/menu-mischief/game.js"

@@ -9,6 +9,7 @@ This release focuses on baseline project readiness plus a browser-playable verti
 - repeatable test/check flow
 - clear architecture description
 - a lightweight browser game prototype (`Menu Mischief`)
+- a repeatable `.zip` packaging flow for download
 
 ## Quick Start
 ```bash
@@ -22,11 +23,21 @@ Open the file below in any modern browser:
 
 No build step is required; this prototype uses plain HTML/CSS/JavaScript.
 
+## Build a Downloadable ZIP
+Run:
+```bash
+./scripts/package_menu_mischief.sh
+```
+
+Output:
+- `dist/menu-mischief.zip`
+
 ## Repository Layout
 - `README.md` — project overview, setup, release checks
 - `docs/ARCHITECTURE.md` — architecture intent, module map, build order
 - `scripts/setup.sh` — environment/setup validation
 - `scripts/test.sh` — baseline repository checks
+- `scripts/package_menu_mischief.sh` — creates downloadable game zip
 - `web/menu-mischief/` — browser game prototype about navigating funny menus
 
 ## Setup
@@ -50,6 +61,7 @@ Current tests/checks:
 - setup script can run successfully
 - required docs and browser game files exist
 - architecture document includes required sections
+- downloadable zip is generated and includes all game runtime files
 
 ## Release Checklist
 - [x] Docs finalized
@@ -57,6 +69,7 @@ Current tests/checks:
 - [x] Tests/checks executable
 - [x] Architecture documented
 - [x] Browser game prototype committed
+- [x] Zip packaging path committed
 
 ## Next Milestones
 Follow the planned build order from `docs/ARCHITECTURE.md`:
